@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doughnut-container {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.doughnut-label {
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.doughnut-label .name {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.doughnut-label .number {
+    display: flex;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius: 8px;
+    gap: 8px;
+    font-size: 18px;
+    color: var(--color);
+}
+
+.doughnut-label .number svg path{
+    fill: var(--color);
+}
+
+.doughnut-label:nth-child(1) .number {
+    --color: #2184FF; /* Text Color + SVG Color */
+}
+
+.doughnut-label:nth-child(2) .number {
+    --color: #774FE0; /* Text Color + SVG Color */
+}
+
+.doughnut-label:nth-child(3) .number {
+    --color: #00563E; /* Text Color + SVG Color */
+}
+
+.doughnut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: 300px;
+    width: 100%;
+    max-height: 300px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 300px;
+}
+
+.doughnut-center div:nth-child(1),
+.doughnut-center div:nth-child(3) {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.doughnut-center div:nth-child(2) {
+    font-size: 40px;
+    font-weight: 600;
+}
